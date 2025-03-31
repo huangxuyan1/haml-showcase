@@ -1,0 +1,14 @@
+%html
+  %head
+    %title Users List
+  %body
+    - if @users.any?
+      %h1 Welcome, here are your users:
+      %ul
+        - @users.each do |user|
+          %li
+            %strong= user.name
+            - if user.admin?
+              %em (admin)
+    - else
+      %h1 No users found.

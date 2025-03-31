@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Users List</title>
+  </head>
+  <body>
+    <% if @users.any? %>
+      <h1>Welcome, here are your users:</h1>
+      <ul>
+        <% @users.each do |user| %>
+          <li>
+            <strong><%= user.name %></strong>
+            <% if user.admin? %>
+              <em>(admin)</em>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <h1>No users found.</h1>
+    <% end %>
+  </body>
+</html>

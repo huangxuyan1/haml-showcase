@@ -1,3 +1,6 @@
+- code_haml = File.readlines("source/code/haml.txt")
+- code_erb = File.readlines("source/code/erb.txt")
+
 %h1 HAML vs ERB Comparison
 
 .code-comparison
@@ -5,45 +8,15 @@
     %h2 HAML
     %pre
       %code.language-haml
-        .code-link= "%html"
-        .code-link= "  %head"
-        .code-link= "    %title Users List"
-        .code-link= "  %body"
-        .code-link= "    - if @users.any?"
-        .code-link= "      %h1 Welcome, here are your users:"
-        .code-link= "      %ul"
-        .code-link= "        - @users.each do |user|"
-        .code-link= "          %li"
-        .code-link= "            %strong= user.name"
-        .code-link= "            - if user.admin?"
-        .code-link= "              %em (admin)"
-        .code-link= "    - else"
-        .code-link= "      %h1 No users found."
+        - code_haml.each do |line|
+          .code-link= line.chomp
+          %br
 
   .erb-block
     %h2 ERB
     %pre
       %code.language-erb
-        .code-link= "<html>"
-        .code-link= "  <head>"
-        .code-link= "    <title>Users List</title>"
-        .code-link= "  </head>"
-        .code-link= "  <body>"
-        .code-link= "    <% if @users.any? %>"
-        .code-link= "      <h1>Welcome, here are your users:</h1>"
-        .code-link= "      <ul>"
-        .code-link= "        <% @users.each do |user| %>"
-        .code-link= "          <li>"
-        .code-link= "            <strong><%= user.name %></strong>"
-        .code-link= "            <% if user.admin? %>"
-        .code-link= "              <em>(admin)</em>"
-        .code-link= "            <% end %>"
-        .code-link= "          </li>"
-        .code-link= "        <% end %>"
-        .code-link= "      </ul>"
-        .code-link= "    <% else %>"
-        .code-link= "      <h1>No users found.</h1>"
-        .code-link= "    <% end %>"
-        .code-link= "  </body>"
-        .code-link= "</html>"
+        - code_erb.each do |line|
+          .code-link= line.chomp
+          %br
 
