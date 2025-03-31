@@ -1,0 +1,82 @@
+.four-year-plan {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: Arial, sans-serif;
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    vertical-align: top;
+  }
+
+  th {
+    background-color: #eee;
+    text-align: center;
+  }
+
+  td{
+    border-block: none;
+  }
+
+  td:nth-child(odd) {
+    background-color: #ba0c2fbd;
+  }
+
+  td:nth-child(even) {
+    background-color: #a7b1b7a8;
+  }
+
+  tr:last-child td {
+    border-bottom: 1px solid #ccc;
+  }
+
+}
+
+.class-row{
+  border: 0px;
+}
+
+.osu-logo{
+  width: 450px;
+  height: auto;
+}
+
+h1{
+  font-family: BuckeyeSans, HelveticaNeue, Helvetica;
+  text-align: center;
+}
+
+.class-box {
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc;  
+  padding: 0.5rem;          
+  transition: background-color 0.3s ease;
+  border-radius: 7%;
+
+  h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+  }
+}
+
+.highlight-self {
+  background-color: #ffe082;
+}
+
+.highlight-prereq {
+  background-color: #ffcc80;
+}
+
+.highlight-coreq {
+  background-color: #ffab91;
+}
+
+.highlight-postreq {
+  background-color: #ff8a80;
+}
